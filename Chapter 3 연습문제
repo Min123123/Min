@@ -1,0 +1,97 @@
+# 연습 100점을 받은 학생에게만 출력해보자.
+
+marks = [30,40,56,22,34,100] 
+
+for number in range(len(marks)): # 이렇게 되면  range(6)이 된다.
+    if marks[number] < 100:
+        continue
+    print("%d번 학생 축하합니다. 합격입니다." % (number+1))
+
+## 생각 잘 하기! 100점보다 낮은 점수를 받은 학생이니까 if 조건문이 참이 되어 continue문이 적용, for문으로 돌아간거고, 
+## 100점을 받은 학생은 거짓이 되어 continue문을 빠져나가서 print를 출력함. 
+
+marks = [30,40,56,22,34,100] 
+
+for number in range(len(marks)):
+    if marks[number] < 100:
+        continue
+    print
+
+
+
+# 1 다음 코드의 결괏값은 무엇일까?
+
+
+a = "Life is too short, you need python"
+if "wife" in a: print("wife")
+elif "python" in a and "you" not in a: print("python")
+elif "shirt" not in a: print("shirt") # 이 조건이 맞으므로 여기서 끝난다. 아래 조건들을 볼 필요가 없음.
+elif "need" in a: print("need")
+else: print("none")
+
+
+# 2 while문을 사용해 1부터 1000까지의 자연수 중 3의 배수의 합을 구해 보자.
+
+result = 0 
+i = 1 
+while i <= 1000:
+    if i % 3 == 0:
+        result += i
+    i += 1  # +=가 뭐야? => 1씩 증가한다는 의미. i = i + 1 이런 식으로 안해도 된다는건가
+print(result)
+       
+    
+
+# 3 while문을 사용하여 다음과 같이 별(*)을 표시하는 프로그램을 작성해 보자.
+
+i = 0
+while True: # while의 조건문이 항상 True이다 => while문 안에 있는 문장들은 무한으로 수행된다. 무한 루프
+    i += 1
+    if i >= 5:
+        break # i가 5가 넘으면 자동으로 종료된다.
+    print("*" * i) # i만큼 *를 출력한다.
+
+
+
+# 4 For문을 사용해서 1부터 100까지 출력
+
+for i in range(1,101):
+    print(i)
+
+# 3부터 10까지 출력
+
+for a in range(3,11):
+    print(a)
+
+
+# 5 A 학급에 총 10명의 학생이 있다. 이 학생들의 중간고사 점수는 다음과 같다.
+#[70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+#for문을 사용하여 A 학급의 평균 점수를 구해 보자.
+
+
+A = [70, 60, 55, 75, 95, 90, 80, 80, 85, 100]
+total = 0
+
+for score in A:
+    total += score # A학급의 점수를 모두 더한다.
+
+average = total / len(A) #len함수를 이용해 학생의 수를 구하고, 전체를 그 수로 나누어 평균을 구함.
+print(average)
+
+
+# 홀수에만 2를 곱하여 저장하는 코드.
+# 6 numbers = [1, 2, 3, 4, 5]
+# result = [] # 아무것도 포함하지 않는 리스트를 []로 표현한다.
+# for n in numbers:
+    #if n % 2 == 1: # 홀수이면:
+        #result.append(n*2) # append함수를 통해 리스트의 맨 마지막에 x를 추가함.
+# 위 코드를 리스트 내포(list comprehension)를 사용하여 표현해 보자.
+
+t = [1, 2, 3, 4, 5]
+result = [num * 2 for num in t if num % 2 ==1]
+print(result)
+# 리스트 내포를 사용하여 홀수에만 2를 곱한 결과가 출력됨.
+
+
+
+
