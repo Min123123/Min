@@ -1,0 +1,66 @@
+# Q1 주어진 자연수가 홀수인지 짝수인지 판별해 주는 함수(is_odd)를 작성해 보자.
+
+from re import I
+
+
+def is_odd(number): # 함수를 정의하고 매개변수까지 입력한다.
+    if number % 2 == 1: # 홀수라는 뜻!
+        return True
+    else:
+        return False
+    
+print(is_odd(3)) # 3을 입력했을 때 True가 나오고,
+print(is_odd(8)) # 8을 입력했을 때 False가 나온다!
+
+
+
+# Q2 입력으로 들어오는 모든 수의 평균 값을 계산해 주는 함수를 작성해 보자. (단 입력으로 들어오는 수의 개수는 정해져 있지 않다.)
+# 입력으로 들어오는 수의 개수가 정해져 있지 않다 => *args 사용?
+
+
+def avg_numbers(*args): 
+    result = 0 # 0부터 시작해서 하나씩 더해간다.
+    for i in args: 
+        result += i # result += i <===>  result = result + i 
+    return result / len(args) # len 함수를 이용해서 평균을 구함.
+
+
+
+# Q3 다음은 두 개의 숫자를 입력받아 더하여 돌려주는 프로그램이다.
+
+input1 = input("첫번째 숫자를 입력하세요:")
+input2 = input("두번째 숫자를 입력하세요:")
+
+total = int(input1) + int(input2) # 입력은 항상 문자열이므로 int함수를 사용해서 숫자로 바꾸어주면 된다.
+print("두 수의 합은 %s 입니다" % total)
+
+
+
+# Q4 다음 중 출력 결과가 다른 것 한 개를 골라 보자.
+
+print("you" "need" "python") # youneedpython
+print("you"+"need"+"python") # youneedpython
+print("you", "need", "python") # you need python
+print("".join(["you", "need", "python"])) # youneedpython
+
+# print 함수에서 ""로 둘러싸인 문자열은 + 연산과 동일하다.
+# 문자열 간 띄어쓰기는 ,로 한다.
+
+
+
+# Q5 다음은 "test.txt"라는 파일에 "Life is too short" 문자열을 저장한 후 다시 그 파일을 읽어서 출력하는 프로그램이다.
+
+f1 = open("test.txt", 'w') # 새로운 내용을 추가함에 있어 w는 기존 내용에 덮어쓰는 것.
+f1.write("Life is too short")
+f1.close()
+
+f2 = open("test.txt", 'r')
+print(f2.read())
+f2.close
+# 이 프로그램은 우리가 예상한 "Life is too short"라는 문장을 출력하지 않는다. 우리가 예상한 값을 출력할 수 있도록 프로그램을 수정해 보자.
+
+# close로 열린 파일 객체를 닫아줘야 한다. 혹은 with 구문을 사용하거나.
+
+
+
+
