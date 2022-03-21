@@ -1,0 +1,68 @@
+from distutils.command.build_scripts import first_line_re
+
+
+result1 = 0
+result2 = 0
+
+def add1(num):
+    global result1
+    result1 += num
+    return result1
+
+def add2(num):
+    global result2
+    result2 += num
+    return result2
+
+
+class FourCal:
+    pass
+a = FourCal()
+# a라는 변수에 일종의 설계도인 class를 찍어서 a에 넣는다.
+
+
+
+class FourCal:
+    def __init__(self,first,second): # __init__ 생성자 : 선언할 때 가장 먼저 실행된다.
+        self.first = first
+        self.second = second
+    def setdata(self, first, second): # 메서드의 매개변수
+        self.first = first # 매서드의 수행문 1
+        self.second = second # 매서드의 수행문 2
+    def add(self): # add 메서드의 매개변수는 self.
+        result = self.first + self.second
+        return result   # a.add()를 호출하면(a 객체에 의해 add 메서드가 수행된다) add 메서드가 호출된다. # add 메서드의 반환 값은 result.
+
+class MoreFourCal(Fourcal): # 위의 FourCal 클래스를 상속받은 MourFourCal, 일종의 자식클래스
+    def pow(self): # 기존 부모함수에서 pow(제곱)하는 함수를 추가함.
+        result = self.first ** self.second
+        return result
+
+class SafeFourCal(Fourcal):
+
+# 만약 부모 클래스의 함수와 자식 클래스의 함수가 겹친다면(덮어쓴다면, 오버라이딩), 자식 클래스의 함수가 우선한다! 즉 받아서 변형을 할 수 있다.
+
+
+class Family: 
+    lastname = '박' # 클래스 변수 => Family라는 클래스에 공통적으로 적용되는 변수.
+
+Family.lastname = '김' # Family클래스(설계도)를 호출해서 설계도 자체를 변경할 수 있음.
+
+
+
+
+
+
+# 클래스의 상속 : 기존에 사용한 클래스를 그대로 사용하기 위함.
+
+ 
+
+
+
+# a = FourCal() # setdata 메서드를 호출하기 위해 객체 a를 만듦.
+# a.setdata(1,2) # 객체를 통해 클레스의 메서드를 호출하기 위해 도트 연산자 사용.
+
+# setdata 메서드의 self에는 a가, first 에는 1이, second 에는 2가 들어감.
+
+
+
