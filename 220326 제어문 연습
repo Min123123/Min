@@ -1,0 +1,165 @@
+# 학점 계산기
+# 이 수업에는 50점 만점의 중간고사와 50점 만점의 기말고사가 있는데요. 두 시험의 점수를 합해서 최종 성적을 내는 방식입니다. 규칙은 다음과 같습니다.
+
+# A: 90점 이상
+# B: 80점 이상 90점 미만
+# C: 70점 이상 80점 미만
+# D: 60점 이상 70점 미만
+# F: 60점 미만
+# print_grade 함수는 파라미터로 중간고사 점수 midterm_score와 기말고사 점수 final_score를 받고, 최종 성적을 출력합니다.
+
+
+from re import A
+
+
+def print_grade(midterm_score,final_score):
+    if midterm_score + final_score >= 90:
+        print("A")
+    elif midterm_score + final_score >= 80:
+        print("B")
+    elif midterm_score + final_score >= 70:
+        print("C")
+    elif midterm_score + final_score >= 60:
+        print("D")
+    else:
+        print("F")
+
+# 테스트
+
+print_grade(40, 45)
+print_grade(20, 35)
+print_grade(30, 32)
+print_grade(50, 45)
+
+
+
+
+# 이상한 수학 문제 1
+
+# while문과 if문을 활용하여, 100 이하의 자연수 중 8의 배수이지만 12의 배수는 아닌 것을 모두 출력
+
+i = 1 # i는 1부터 시작
+while i <= 100: # i가 100이하가 될 때 까지만 반복한다.
+    if i % 8 == 0 and i % 12 != 0: # and를 이용해서 두 조건을 합쳐준다
+        print(i)
+    i += 1 # 이 구문은 꼭 if문 밖에 있어야 한다! 그렇지 않으면 무한 루프에 빠진다.
+
+
+
+# 이상한 수학 문제 2
+
+# 10보다 작은 2 또는 3의 배수는 2, 3, 4, 6, 8, 9이며, 이들의 합은 32입니다.
+# while문과 if문을 활용하여, 1,000보다 작은 자연수 중 2 또는 3의 배수의 합을 출력하는 프로그램을 써 보세요.
+
+i = 1
+total = 0 # 누적된 합을 보관하는 변수 total 정의
+
+while i < 1000:
+    if i % 2 == 0 or i % 3 == 0:
+        total += i # 1000보다 작은 2 또는 3의 배수
+        print(total)
+    i += 1
+
+# total을 정의하지 못함.
+# total += i ==> 나온 i를 모두 더한다!
+
+
+
+# 약수의 개수 구하기
+
+# 정수 n의 약수는 n으로 나누었을 때 나누어 떨어지는 수입니다. 만약 정수 i가 정수 n의 약수라면, n을 i로 나누었을 때 나머지가 0이 나와야 하는 거죠.
+# n/i == 0 (i는 n의 약수)
+# 정수 120의 약수를 모두 출력하고, 총 몇개의 약수가 있는지 출력하는 프로그램을 써 보세요.
+
+
+i = 1
+count = 0
+while i <= 120:
+    if 120 % i == 0: # %를 사용해서 나머지를 반환
+        print(i)
+        count += 1
+    i += 1
+## 여기까지 120의 약수를 출력하는 코드 완성.
+### 이제 약수들의 개수를 구하는 코드를 만들어야 함.
+#### 출력된 약수의 합을 구하는 count라는 변수를 생성한다.
+##### 120의 약수를 발견했을 때, i(120의 약수)를 출력하고, 1씩 늘려준다.
+
+print("{}의 약수는 총 {}개 입니다!".format(120,count))
+
+
+
+
+
+# 우승 상금
+
+year = 1988
+asset = 50000000
+INTEREST_RATE = 0.12 # 변하지 않는 값이므로 상수 정의
+APT_PRICE_2016 = 1100000000 # 변하지 않는 값이므로 상수 정의
+total = 0
+
+# 현재 1988년   
+# 2016에는 어떻게 될지? (28년 후)
+
+# 2016년에 은행에 얼마 있을지
+
+while year < 2016:
+    asset = asset * (1  + INTEREST_RATE) # x에서 10% 더할 경우 = x(1+0.1) = x * 1.1 
+    year += 1
+
+if asset >= APT_PRICE_2016:
+    print("{}원 차이로 동일 아저씨 말씀이 맞습니다.".format(int(asset-APT_PRICE_2016)))
+else:
+    print("{}원 차이로 미란 아줌마 말씀이 맞습니다.".format(int(APT_PRICE_2016-asset)))
+
+
+
+
+
+# 피보나치 수열(Fibonacci Sequence)
+
+# 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
+
+# 우선 피보나치 수열의 1번 항과 2번 항은 각각 1입니다. 3번 항부터는 바로 앞 두 항의 합으로 계산됩니다. 
+
+# 피보나치 수열의 첫 50개 항을 차례대로 출력하는 프로그램을 작성해 보세요.
+
+
+current = 1
+previous = 0
+i = 1
+
+while i < 50:
+    print(current)
+    temp = previous # temp 변수에 previous 임시저장
+    previous = current
+    current = current + temp # temp에는 기존 precious 값이 저장되어 있음.
+    i += 1
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+        
+    
+    
+
+
+
+        
+        
