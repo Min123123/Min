@@ -1,0 +1,109 @@
+# greetings 리스트의 원소를 모두 출력하는 프로그램을 작성해 보세요. while문과 리스트의 개념을 활용
+
+greetings = ["안녕", "니하오", "곤니찌와", "올라", "싸와디캅", "헬로", "봉주르"]
+
+
+# 풀이 1 : 무한루프와 break문 이용.
+# while문이 7번 반복한다는 조건을 설정해줘야 함.
+while True:
+    print(greetings[0])# greetings 리스트의 첫 번째 요솟값을 출력함.
+    print(greetings[1])
+    print(greetings[2])
+    print(greetings[3])
+    print(greetings[4])
+    print(greetings[5])
+    print(greetings[6])
+    break
+
+## 풀이 1의 경우에는 리스트의 개수가 많을 때 쓰기 힘들다.
+
+# 풀이 2 
+
+greetings = ["안녕", "니하오", "곤니찌와", "올라", "슬라맛 빠기", "슬라맛 씨앙", "슬라맛 소레"]
+
+i = 0 # 변수 i가 0부터 시작
+while i <= 6: # i가 6이 될 때까지 반복
+    print(greetings[i]) # print(greetings[0])부터 시작해서 6까지 출력
+    i += 1 # 출력될때마다 i를 하나씩 증가시킴.
+
+# 이 풀이를 기억하자!
+
+
+# 풀이 3 : len 함수 사용
+
+greetings = ["안녕", "니하오", "곤니찌와", "올라", "슬라맛 빠기", "슬라맛 씨앙", "슬라맛 소레"]
+
+i = 0
+while i < len(greetings): # leng(greetings)는 7로 고정되어 있음.
+    print(greetings[i])
+    i+=1
+
+
+
+
+# 화씨 온도(°F)를 섭씨 온도(°C)로 바꾸어주는 프로그램
+
+
+
+
+def fahrenheit_to_celsius(fahrenheit): # 화씨 온도를 파라미터로 받는 함수를 정의함.
+    return = ((fahrenheit - 32) *5 ) / 9 # 섭씨 온도를 리턴한다.
+
+    print("화씨 온도 리스트: {}".format(temp_list)) # 화씨온도 리스트를 받음
+
+temp_list = [40, 15, 32, 64, -4, 11] # 화씨를 섭씨로 바꿔야 하기에 화씨 리스트를 temp_list로 정의함.
+print("화씨 온도 리스트: {}".format(temp_list))
+
+i = 0
+while i < len(temp_list):
+    temp_list[i] = fahrenheit_to_celsius(temp_list[i]) # 화씨 온도를 섭씨 온도로 변환
+    i += 1
+print("섭씨 온도 리스트: {}".format(temp_list))
+
+
+
+
+# 원화
+
+kor = [34000, 13000, 5000, 21000, 1000, 2000, 8000, 3000]
+
+# 달러?
+
+def krw_to_usd(krw): # 원화를 받아서 달러로 변환, 1달러에 1000원
+    return krw / 1000
+
+def usd_to_jpy(usd):
+    return (usd / 8) * 1000 # usd를 받아서 엔화를 출력.
+
+
+i = 0
+while i <= len(kor) - 1:
+    kor[i] = krw_to_usd(kor[i]) # 원화를 받아서 미국화폐를 출력
+    i += 1
+
+print("미국 화폐:" + str(kor))
+
+# 달러를 받아서 엔화를 출력 
+
+i = 0
+while i <= len(kor) - 1:
+    kor[i] = usd_to_jpy(kor[i])
+    i += 1
+print("일본 화폐:" + str(kor))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
