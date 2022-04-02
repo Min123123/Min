@@ -118,8 +118,8 @@ i = 0
 numbers = [1, 7, 3, 6, 5, 2, 13, 14]
 while i < len(numbers): # 요솟값이 8개가 나올 때까지 반복한다.
     if numbers[i] % 2 != 0: # 요솟값이 홀수이면 제거한다.
-        del numbers[i] 
-    else:
+        del numbers[i] # 홀수이면 삭제하고,
+    else: # 짝수이면 i를 하나씩 증가시킨다.
         i += 1
  
 print(numbers)
