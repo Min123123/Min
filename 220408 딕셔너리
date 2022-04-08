@@ -1,0 +1,138 @@
+# 딕셔너리
+# key_value pair (키-값 쌍)
+
+my_dict = {
+    5: 25, 
+    3: 21,
+    4: 9
+}
+my_dict[6] = 23 # 기존 사전에 새로운 키와 값을 추가. 6이라는 키에 23이라는 값을 추가함.
+print(my_dict)
+
+
+# 1. 단어장 만들기
+vocab = {
+    'sanitizer': '살균제',
+    'ambition': '야망',
+    'conscience': '양심',
+    'civilization': '문명',  # , 꼭 넣어주기!
+}
+print(vocab)
+
+# 2. 새로운 단어들 추가
+vocab['privilege:'] = '특권'
+vocab['principle:'] = '원칙'
+print(vocab)
+
+
+
+my_bunnies = {
+    'lop' : 'eared bunny',
+    'holland lop' : 'cuter eared bunny',
+    'smol smol lop' : 'bunny bunny',
+    'lion head' : 'smol smol baby bun',
+
+}
+
+print(my_bunnies.values()) # 딕셔너리의 목록을 출력한다.
+print('eared bunny' in my_bunnies.values()) # 딕셔너리 안에 해당 값(value)이 있는지 찾아보기 위함. 불린값으로 출력됨.
+
+for value in my_bunnies.values(): # 딕셔너리의 값 목록을 하나씩 차례로 출력.
+    print(value)
+
+print(my_bunnies.keys())
+
+
+for key in my_bunnies.keys(): # 딕셔너리의 key 목록을 하나씩 출력.
+    print(key)
+
+
+# key를 통해서 값을 받아옴.
+
+for key in my_bunnies.keys():
+    value = my_bunnies[key]
+    print(key,value) # key와 value를 한꺼번에 출력함.
+
+
+# items 함수를 사용하여 key와 value를 한꺼번에 출력.
+
+for key, value in my_bunnies.items(): 
+   print(key,value)
+
+
+
+
+
+
+
+# 사전 뒤집기
+
+
+def reverse_dict(dict):
+    new_dict = {} # 새로운 사전 new_dict 정의
+
+    for key, value in dict.items(): # dict의 키와 값을 모두 불러옴.
+        new_dict[value] = key # 각각의 key-value 쌍을 반대로 new_dict에 저장.
+
+    return new_dict # 반대로 저장된 new_dict를 반환함.
+
+
+# 기존의 영-한 단어장
+
+vocab = {
+    'sanitizer': '살균제',
+    'ambition': '야망',
+    'conscience': '양심',
+    'civilization': '문명',
+    'privilege': '특권',
+    'principles': '원칙'
+}
+
+# 기존 단어장 출력
+
+print('영-한 단어장\n{}\n'.format(vocab))
+
+# 변환된 단어장 출력
+
+reversed_dict = reverse_dict(vocab) # 정의된 reverse_dict를 reversed_dict 변수에 저장. 파라미터는 vocab을 받고, 그 결과는 반대로 뒤집힌 vocab이 나온다.
+print('한-영 단어장\n{}\n'.format(reversed_dict))
+
+
+
+
+
+
+# 투표 집계하기
+
+# 리스트 votes 
+
+votes = ['김영자', '강승기', '최만수', '김영자', '강승기', '강승기', '최만수', '김영자', \
+'최만수', '김영자', '최만수', '김영자', '김영자', '최만수', '최만수', '최만수', '강승기', \
+'강승기', '김영자', '김영자', '최만수', '김영자', '김영자', '강승기', '김영자']
+
+# 후보별 득표수 사전
+
+vote_counter = {}
+
+# 리스트를 이용해 vote_counter 정리
+
+# case 1. 해당 후보(name)가 아직 vote_counter에 없는 케이스
+# case 2. 해당 후보(name)가 이미 vote_counter에 있는 케이스
+# 1번 케이스는 해당 후보가 첫 득표를 한 상황. vote_counter[name] = 1
+# 2번 케이스는 해당 후보가 이미 최소 하나의 득표를 한 상황. 기존 득표수에 하나를 늘려줌. vote_counter[name] += 1
+
+for name in votes: 
+    if name not in vote_counter: # 첫 득표
+        vote_counter[name] = 1
+    else: 
+        vote_counter[name] += 1
+
+print(vote_counter)
+
+
+
+
+
+
+
+
