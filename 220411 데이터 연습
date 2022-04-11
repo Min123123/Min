@@ -80,10 +80,10 @@ def is_palindrome(word):
 def is_palindrome(word):
     for left in range(len(word) // 2): # len(word) // 2 => 중심 인덱스를 의미함.
         right = len(word) - left - 1
-        if word[left] == word[right]: # 문자가 좌우 대칭일 경우에는 True반환, 
-            return True
-        else:
+        if word[left] != word[right]: # 문자가 좌우 대칭일 경우에는 True반환, 
             return False
+       
+     return True
     
     
 print(is_palindrome("racecar"))
