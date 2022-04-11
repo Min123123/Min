@@ -1,0 +1,93 @@
+# 함수 sum_digit은 파라미터로 정수형 num을 받고, num의 각 자릿수를 더한 값을 리턴합니다.
+
+
+# sum_digit 함수를 작성한다.
+
+from unicodedata import digit
+
+
+def sum_digit(num): # num은 정수형int
+    total = 0 # 각 자릿수를 더한 값이 들어갈 변수 total 정의
+    # 정수형을 문자열로 바꿔줘야되나?
+    # for 반복문을 구현하기 위해서 정수형을 문자열로 바꿔줘야 함.
+    # for A in B 가 있을 때 B 에 할당할 수 있는 건 순회할 수 있는 객체. 이 예로 문자열, 리스트 등이 있음.
+      그래서 str 함수로 문자열로 만드는 것.
+    str_num = str(num) # 문자형으로 변환된 num을 str_num이라는 변수에 저장.
+    for i in range(len(str_num)): 
+        digit = str_num[i] 
+        total = total + int(digit) # 수를 더해줘야 하므로 문자열로 바꾼 degit을 다시 정수형으로 변환.
+    return total
+
+
+# sum_digit(1)부터 sum_digit(1000)까지의 합을 구해서 출력한다.
+
+digit_total = 0 # digit_total이라는 변수를 생성
+for i in range(1,1001):
+    digit_total += sum_digit(i)
+
+print(digit_total)
+
+
+
+
+# 주빈번호 가리기(마지막 4자리만 *로 가리기)
+
+def mask_security_number(security_number):
+    # 주민번호는 총 13자리
+    num_list = list(security_number) # 문자열은 수정이 불가능하므로, 수정이 가능한 리스트로 형변환.
+    for i in range(len(num_list) - 4, len(num_list)):
+        num_list = "*"
+
+# 리스트인 num_list를 다시 문자열로 형변환
+    total_str = ""
+
+
+
+def mask_security_number(security_number):
+    return security_number[:-4] + "****"
+
+# 뒤에서 4개까지 날려버리고, * 4개를 추가함.
+
+ 
+print(mask_security_number("880720-1234567"))
+print(mask_security_number("8807201234567"))
+print(mask_security_number("930124-7654321"))
+print(mask_security_number("9301247654321"))
+print(mask_security_number("761214-2357111"))
+print(mask_security_number("7612142357111"))
+
+
+
+# 팰린드롬
+
+def is_palindrome(word):
+    # word는 문자열.
+    # 첫번째 원소와 마지막 원소가 같은지 비교
+    # 문자가 대치되어야 함.
+    i = 0
+    if word == word[::-1]:
+        return True
+    else:
+        return False
+# 슬라이싱에는 총 3개의 값을 줄 수 있다.
+# 1번째는 작성한 인덱스를 포함하는 시작 인덱스 값,
+# 2번째는 작성한 인덱스를 포함하지 않는 끝 인덱스 값,
+# 3번째는 증감을 표현함.
+# 그래서 1번째와 2번째에 아무런 값도 주지 않으면 모든 값을 의미하고 3번째 증감에서 -1을 처리하면 맨뒤에서 부터 역순으로 하나씩 슬라이싱한 것이 됨.
+
+
+
+def is_palindrome(word):
+    for left in range(len(word) // 2): # len(word) // 2 => 중심 인덱스를 의미함.
+        right = len(word) - left - 1
+        if word[left] == word[right]: # 문자가 좌우 대칭일 경우에는 True반환, 
+            return True
+        else:
+            return False
+    
+    
+print(is_palindrome("racecar"))
+print(is_palindrome("stars"))
+print(is_palindrome("토마토"))
+print(is_palindrome("kayak"))
+print(is_palindrome("hello"))
