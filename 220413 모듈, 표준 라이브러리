@@ -20,6 +20,7 @@ print(os.getcwd()) # 현재 파일의 경로
 
 
 
+
 # random.rendint
 
 import random 
@@ -33,3 +34,48 @@ print(random.randint(1, 20)) # a ≤ N ≤ b를 만족하는 어떤 랜덤한 �
 import random
 
 print(random.uniform(0, 1)) # a ≤ N ≤ b를 만족하는 어떤 랜덤한 소수 N을 리턴
+
+
+# import datetime : 날짜와 시간을 다루기 위한 다양한 클래스를 갖추고 있음.
+
+# 오늘 날짜 표현하기
+
+import datetime
+
+pi_day = datetime.datetime.now() # 날짜와 시간까지 표현
+print(pi_day)
+print(type(pi_day))
+
+
+# 두 datetime 값 사이의 기간을 알고 싶을 때
+
+today = datetime.datetime.now()
+pi_day = datetime.datetime(2022, 3, 14, 13,6,15)
+print(today - pi_day)
+print(type(today - pi_day))
+
+
+
+
+# datetime 값에서 '연도'나 '월' 같은 값들을 추출
+
+today = datetime.datetime.now()
+
+print(today)
+print(today.year)  # 연도
+print(today.month)  # 월
+print(today.day)  # 일
+print(today.hour)  # 시
+print(today.minute)  # 분
+print(today.second)  # 초
+print(today.microsecond)  # 마이크로초
+
+
+
+# datetime 포매팅
+
+today = datetime.datetime.now()
+
+print(today)
+print(today.strftime("%A, %B %dth %Y"))
+
