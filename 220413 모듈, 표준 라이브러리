@@ -1,0 +1,35 @@
+# standard liberary 표준 라이브러리 : 기본적으로 제공되는 모듈. 그냥 갖다 쓰면 됨.
+
+import math
+
+print(math.log10(100))
+print(math.cos(0))
+print(math.pi)
+
+
+import random # 임의의 수를 출력하고자 함.
+
+print(random.random()) # random 모듈의 random 함수를 사용하게 되면 0.0과 1.0 사이의 임의의 값을 리턴함.
+
+
+
+import os # operating system 운영체제 모듈 : 파이썬으로 운영체제를 조작하기 위한 모듈.
+
+print(os.getlogin()) # 현재 운영체제에 어떤 계정으로 로그인되어 있는지
+print(os.getcwd()) # 현재 파일의 경로
+
+
+
+# random.rendint
+
+import random 
+
+print(random.randint(1, 20)) # a ≤ N ≤ b를 만족하는 어떤 랜덤한 정수 N을 리턴
+
+
+
+# random.uniform
+
+import random
+
+print(random.uniform(0, 1)) # a ≤ N ≤ b를 만족하는 어떤 랜덤한 소수 N을 리턴
