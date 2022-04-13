@@ -1,0 +1,40 @@
+import random
+# 상수 정의
+ANSWER = random.randint(1,20) # 1에서 20까지 랜덤한 숫자 
+NUM_TRIES = 4 # 시도 횟수 제한
+
+#변수 정의
+tries = 0 # 플레이어 시도 횟수
+guess = -1 # 사용자가 던진 숫자 
+
+
+# while 문에 넣어야 함.
+
+while guess != ANSWER and tries < NUM_TRIES: # 답이 다르고, 시도 횟수가 4보다 작을 경우에 계속 반복한다.
+    guess = int(input("기회가 {}번 남았습니다. 1-20 사이의 숫자를 맞혀보세요: ".format(NUM_TRIES - tries)))
+    tries += 1
+    
+    if ANSWER > guess:
+        print("UP")
+    else:
+        print("DOWN")
+# 여기까지 정답을 맞히지 못한경우
+if guess == ANSWER:
+    print("축하합니다! {}번만에 숫자를 맞히셨습니다.".forma3t(tries))
+else:
+    print("아쉽습니다. 정답은 {}입니다.".format(ANSWER))
+
+
+
+
+    
+    
+
+
+
+    
+    
+
+    
+    
+    
