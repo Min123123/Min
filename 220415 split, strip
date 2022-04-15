@@ -1,0 +1,33 @@
+print("Hello\n")
+print("Hello\n")
+print("Hello")
+
+
+# strip : 문자열 맨 앞, 뒤의 화이트 스페이스 " ", "\t", "\n" 와 같은 공백을 제거함.
+
+print("       \t      \n abc               def\n\n\n        ".strip()) # 문자열의 맨 앞과 맨 뒤에 있는 화이트 스페이스가 모두 제거되고, 문자열 사이에 있는 공백까지만 출력된다.
+
+
+# split 
+my_string = '1.2.3.4.5.6'
+print(my_string.split(".")) # .을 기준으로 문자열을 나누고, 리스트에 넣는다.
+
+full_name = "Minmin the Bunny Lover"
+name_data = full_name.split(" ") # 문자열 사이의 공백을 기준으로 리스트를 만든다.
+print(name_data)
+first_name = name_data[0]
+last_name = name_data[2:4]
+print(first_name, last_name)
+
+
+numbers = "    \n\n   2   \t   3    \n  5 7 11   \n\n".split()  # 공백을 기준으로 리스트를 만들고자 할 때.
+print(int(numbers[0]) + int(numbers[1])) # 스플릿으로 리스트를 만들었을 경우, 리스트의 값은 모두 문자열이 된다.
+
+
+
+
+
+
+
+
+
