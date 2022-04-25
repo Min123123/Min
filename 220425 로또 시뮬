@@ -1,0 +1,89 @@
+# 1 -45 사이의 숫자를 출력하는  generate_numbers 함수 정의.
+from tkinter import N
+
+
+def generate_numbers(n): # n개를 뽑아야 함. 즉 6개를 뽑아야 한다.
+    lotto = [] # 1 - 45 사이의 무작위 숫자가 들어갈 빈 리스트 lotto를 만들기.
+    
+    while len(lotto) < n: # 6개를 뽑을 때까지 반복해야 하니까, 
+        num = randint(1,45)
+        if num not in lotto: # 중복된 숫자가 없을 경우에만 새로운 수를 추가한다.
+            lotto.append(num)
+    return lotto
+
+
+# 일반 당첨번호 6개와 보너스 번호 1개가 포함된 리스트를 리턴. 
+# 일반 당첨번호 6개는 정렬되어야 하고, 보너스 번호는 마지막에 추가하면 됨. => append
+
+def draw_winning_numbers():
+    winning_numbers = generate_numbers(7) # generate_numbers 함수를 이용해서 숫자 7개를 뽑아냄.
+    ## 그냥 한꺼번에 7개를 뽑아내면 되지 않나?
+
+    # 뽑아낸 숫자 + 보너스 숫자
+    # winning_numbers.append(randint(1,45)) 그러면 굳이 append를 쓸 필요가 없는건데
+
+    # 6개 숫자를 정렬시키고 보너스 번호 1개 추가한 리스트를 리턴.
+    return sorted(winning_numbers[:6]) + winning_numbers[6:]
+
+
+
+# 두 리스트 사이에 겹치는 번호 개수를 리턴하는 함수 정의.
+
+def count_matching_numbers(list_1, list_2):
+    # 각 리스트에서 하나씩 비교해서 만약 같다면 개수를 세는 for 문을 사용해볼까?
+    
+    n = 0
+
+    for i in list_1:
+        for j in list_2:
+            if i == j:
+                n += 1
+    return n
+
+
+
+def check(lotto, winning_numbers):
+    count = count_matching_numbers(lotto, winning_numbers[:6]) # 참가자의 번호 6개와 일반 당첨 번호가 몇 개나 일치하는지 세는 변수 count.
+    count_bonus = count_matching_numbers(num, winning_numbers[6:])
+
+
+    if count == 6:
+        return "10억"
+    elif count == 5 and count_bonus == 1:
+        return "5천만원"
+    elif count == 5:
+        return "100만원"
+    elif count == 4:
+        return "5만원"
+    elif count == 3:
+        return "5천원"
+    else:
+        return 0
+    
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+    
+
+    
+    
+    
+
+    
+
+
+
+
+
+
+    
