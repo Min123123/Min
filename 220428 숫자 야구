@@ -1,0 +1,92 @@
+# 야구 게임
+
+from random import randint
+
+def generate_numbers():
+    numbers = [] # 0~9 사이 무작위의 겹치지 않는 숫자 3개가 들어갈 리스트 만들기.
+    # 3개만 뽑아야 하니까, for 반복문을 걸어준다.
+    while len(numbers) < 3: # 3개가 나올 때까지 반복.
+        num = randint(0,9) # 0~9 사이의 값을 뽑아냄.
+
+        ## 중요! 겹치지 않는 숫자만을 뽑아야 하니까, 중복을 제거해야 함.
+        if num not in numbers:
+            numbers.append(num) # 중복되 숫자가 없을 경우에만 numbers 리스트에 숫자를 추가한다.
+
+        print("0과 9 사이의 서로 다른 숫자 3개를 랜덤한 순서로 뽑았습니다.\n")
+        
+        return numbers # numbers를 리턴함.
+
+
+def take_guess(): # 유저에게 숫자 3개를 입력받는 함수 정의
+      print("숫자 3개를 하나씩 차례로 입력하세요.")
+    # 유저에게 숫자 3개를 반복적으로 입력받은 후, 유저가 입력한 숫자들(num)을 리스트에 정리해서 리턴
+    guess = []
+    while len(guess) < 3: # 숫자 3개를 입력 받을때까지만 반복
+        num = int(input("{}번째 숫자를 입력하세요:".format(len(guess)+1)))
+        if num < 0 or num > 9: # 범위 초과 제거
+            print("범위를 벗어납니다. 다시 입력하세요.")
+        elif: num in guess: # 중복 제거
+            print("중복되는 숫자입니다. 다시 입력하세요.")
+        else: # 범위도 초과하지 않고, 중복도 없다면 guess 리스트에 숫자를 추가함.
+            guess.append(num)
+     
+    return guess
+
+
+# 스트라이크 수와 볼의 개수를 알려주는 get_score함수 정의
+
+def get_score(guesses, solution):
+    # guesses -> 유저가 뽑은 번호 3개가 담긴 리스트
+    # solution -> 컴퓨터가 뽑은 정답 번호 3개가 담긴 리스트
+    for i in range(3): # 스트라이크 정의
+        if guesses[i] == solution[i]: # 숫자와 인덱스 위치가 동일한 경우 스트라이크
+            strike_count += 1
+        elif: guesses[i] in solution[i] and guesses[i] != solution[i]: # guesses가 solution 안에 있되, 인덱스가 일치하면 안됨.
+            ball_count += 1
+
+    return strike_count, ball_count
+
+
+# 합치기
+
+ANSWER = generate_numbers() # 사용자가 뽑은 숫자 3개가 들어있는 리스트를 받음.
+tries = 0 # 시도 횟수
+
+while True:
+    user_guess = take_guess()
+    s,b = get_score(user_guess,ANSWER)
+
+    print("{}S {}B\n".format(s,b)
+    tries += 1
+    
+    if s == 3:
+        break
+
+print("축하합니다. {}번 만에 숫자 3개의 값과 위치를 모두 맟추셨습니다.".format(tries))
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+
+
+
+    
+  
+    
+
+
+
+
+
+
+
