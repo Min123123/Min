@@ -1,32 +1,57 @@
 # 현재 시간을 출력해주는 페이지 만들기
 
+​
+
 from tkinter import * #tkinter 모듈 불러옴
+
 window = Tk() #window라는 윈도우 생성 Tk()
+
 window.geometry("300x300") # 창 크기 조정
+
 window.title("Current Time is..") # 창 제목 설정
+
 window.option_add("*Font", "맑은고딕 20") # 폰트 종류, 크기 변경
 
-# 버튼을 누를 때마다 n+1이 되는 함수
+​
 
+​
 
 # 현재 시간을 알려주는 datetime 모듈 불러오기
+
 from datetime import datetime
+
+​
+
+​
+
+# 버튼을 누르면 버튼 자체에 글씨가 출력되도록!
+
+​
 
 def what_time():
-    print(datetime.now())
 
+dnow = datetime.now()
+
+btn.config(text = dnow) 
+
+​
+
+​
 
 # 버튼 생성
+
 # btn = Button(window) 
+
 btn = Button(window) # window안에 버튼을 생성
+
 btn.config(width = 10, height = 3) # 버튼의 크기 조정
+
 btn.config(text = "hit it") # 버튼에 텍스트 입력
+
 btn.config(command = what_time) # 버튼을 누르면 나올 명령
+
 btn.pack() 
 
+​
+
 window.mainloop() # mainloop로 실행을 해줘야 함.
-
-from datetime import datetime
-print(datetime.now())
-
-
