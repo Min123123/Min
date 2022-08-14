@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bunnies rule the world</title>
+    <meta charset="utf-8" />
+    <link href="css/styles.css" rel="practice.css"/>
+  </head>
+  
+  <body>
+    <div class = "navbar">
+      <a href = "#" id = "logo"><img src = "images/logo.png" width = "149" height = "20"></a>
+      <ul id = "navbar1">
+        <li><a href = "#">Contact</a></li>
+        <li><a href = "#">Shop</a></li>
+        <li><a href = "#">Cart</a></li>
+        <li><a href = "#">Login</a></li>
+      </ul>
+    </div>
+    
+    <div class = "hero_header">
+      <img src = "images/hero_header.jpg" height = "450">
+    </div>
+    
+    <div class = "sec-title">
+      Our New Product
+    </div>
+    
+    <div class ="product-list">
+      <a href = "#" div class = "products">
+        <img src = "images/sunglasses.jpg" width = "225">
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/tassel_loafer.jpg" width = "225">
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/beige_bag.jpg" width = "225">
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/sneakers.jpg" width = "225">
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/slippers.jpg" width = "225" >
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/wrist_watch.jpg" width = "225" >
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/classic_loafer.jpg" width = "225">
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/pink_bag.jpg" width = "225">
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>
+      
+      <a href = "#" div class = "products">
+        <img src = "images/fedora_hat.jpg" width = "225">
+        <div class = "product-name">Beige Bag</div>
+        <div calss = "product-price">69,000</div>
+      </a>    
+      
+      
+      <div class = "clearfix"></div>
+      
+    </div>
+    
+    <div class = "footer">
+      <a href = "http://facebook.com">
+        <img src = "images/facebook.png" height = "20">
+      </a>
+      <a href = "http://instagram.com">
+        <img src = "images/instagram.png" height = "20">
+      </a>
+      <a href = "http://twitter.com">
+        <img src = "images/twitter.png" height = "20">
+      </a>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+  
+  
+  
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  
+  * {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  
+  min-width: 992px;
+  font-family: "Helvetica";
+}
+
+.navbar #logo {
+  line-height: 60px;
+}
+
+.navbar #logo img {
+  vertical-align: middle;
+}
+
+.navbar #navbar1 li a {
+  color:black;
+  font-size : 13px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar {
+  height : 60px;
+  padding-right:30px;
+  padding-left:30px;
+}
+
+.navbar #navbar1 {
+  float:right;
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+.navbar #navbar1 li {
+  float:left;
+  margin-left:30px;
+  color:black;
+  line-height:60px;
+}
+
+.hero_header {
+  height : 450px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position: center center;
+}
+
+#navbar1 li a {
+  text-decoration: none;
+}
+
+.sec-title {
+  text-align: center;
+  margin-top : 60px;
+  font-size : 24px;
+  color : #545454;
+  font-weight: bold;
+  margin-bottom:60px;
+}
+
+.products {
+  width : 225px;
+  text-align: center;
+  display:block;
+  float:left;
+  color:#545454;
+  text-decoration: none;
+  margin-right : 10px;
+  margin-left:10px;
+  margin-bottom: 80px;
+}
+  
+.product-list {
+  width : 735px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.clearfix {
+  clear:both;
+}
+
+.products .product-name {
+  padding-top : 20px;
+  padding-bottom:4px;
+}
+
+.footer {
+  text-align: center;
+  height : 20px;
+  margin-bottom: 80px;
+}
+
+.footer a {
+  margin-right : 10px;
+  margin-left : 10px;
+  text-decoration: none;
+}
+  
