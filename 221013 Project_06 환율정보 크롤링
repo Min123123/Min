@@ -1,0 +1,73 @@
+from typing import Container
+
+from currency_converter import CurrencyConverter
+
+​
+
+​
+
+# 지원되는 통화목록 출력
+
+cc = CurrencyConverter()
+
+print(cc.currencies)
+
+​
+
+​
+
+# 최신 환율 정보로 업데이트
+
+ff = CurrencyConverter('http://www.ecb.europa.eu/stats/eurofxref/eurofxref.zip')
+
+# 원-달러 환율 
+
+print(round((cc.convert(1,'USD','KRW')),2))
+
+# 원-루피아 환율
+
+print(round((cc.convert(100,'IDR','KRW')),2))
+
+​
+
+​
+
+​
+
+# 실시간 환율 정보 크롤링
+
+​
+
+import requests
+
+​
+
+from bs4 import BeautifulSoup
+
+​
+
+def get_exchange_rate(cur1, cur2):
+
+    headers = { # 헤더를 추가하여 일반 브라우저를 이용해 접근한 것으로 위장
+
+        'User-Agent': 'Mozilla/5.0', 
+
+        'Content_Type': 'text/html; charset=utf-8'    
+
+    }
+
+    
+
+    response = requests.get("https://www.investing.com/currencies/{}-{}".format(cur1,cur2),headers=headers)
+
+    content = BeautifulSoup(response.content, 'html.parser')
+
+    containers = content.find('span', {'data-test': 'instrument-price-last'})
+
+    print(containers.text)
+
+​
+
+​
+
+get_exchange_rate('usd', 'krw')
