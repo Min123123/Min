@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="navbar">
+			<div class="left-bar">
+				<a href = "#"><i>Introduce</i></a>
+				<a href = "#"><i>Biography</i></a>
+			</div>
+
+			<div class="right-bar">
+				<a href = "#"><i>Address</i></a>
+				<a href = "#"><i>Dream</i></a>
+			</div>
+		</div>	
+
+		<div class="propic">
+			<img src= "C:\Users\alsto\OneDrive\바탕 화면\KakaoTalk_20221112_184236188.jpg" style = "width: 200px; height: 200px; border-radius: 50%;">
+			<h2 id = "name">Min</h2>
+			<p id = "description">Promising dev</p>
+		</div>			
+	</div>
+
+	<div class="history">	
+		<div class="middle-school">
+			<img src ="https://www.pngitem.com/pimgs/m/504-5040528_empty-profile-picture-png-transparent-png.png" style = "width: 200px; height: 200px; border-radius: 50%;" class = 'pic-empty'>
+			<h2 id = "middle-title">Middle School Period</h2> 	
+			<p id = 'middle-des'>나의 중학교 시절 ~~~~~</p>
+		</div>
+
+		<div class="high-school">
+			<img src ="https://www.pngitem.com/pimgs/m/504-5040528_empty-profile-picture-png-transparent-png.png" style = "width: 200px; height: 200px; border-radius: 50%;" class = 'pic-empty'>
+			<h2 id = "high-title">High School Period</h2> 	
+			<p id = 'high-des'>나의 고등학교 시절 ~~~~~</p>
+		</div>
+
+		<div class="univ">
+			<img src ="https://www.pngitem.com/pimgs/m/504-5040528_empty-profile-picture-png-transparent-png.png" style = "width: 200px; height: 200px; border-radius: 50%;" class = 'pic-empty'>
+			<h2 id = "univ-title">Univ School Period</h2> 	
+			<p id = 'univ-des'>나의 대학교 시절 ~~~~~</p>
+		</div>
+	</div>
+
+	<div class="btnlink">
+		<button onclick="location.href = 'https://blog.naver.com/xoqkq7'";>Blog</button>
+	</div>
+
+
+
+	<script src = "index.JS"></script>
+</body>
+</html>
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+* {
+	box-sizing: border-box;
+	
+}
+
+body {
+	margin: 0;
+	overflow: scroll;
+}
+
+.container {
+	background-color: bisque;
+	height : 300px;
+}
+
+
+.container .navbar {
+	margin: none;
+	padding-top: 100px;
+	padding-left:50px;
+}
+
+.navbar a {
+	text-decoration: none;
+	color:black;
+	font-size: 20px;
+}
+.container .left-bar {
+	float: left;
+}
+
+.left-bar a {
+	padding-left: 50px;
+}
+
+.right-bar a {
+	padding-right : 70px;
+}
+
+.container .right-bar {
+	float:right;
+}
+
+.propic {
+	text-align: center;
+	padding-top: 50px;
+}
+
+a:hover {
+	color : red;
+}
+
+#name {
+	margin-top:3px;
+	margin-bottom: 0;
+}
+
+#description {
+	margin-top: 0;
+}
+
+
+.btnlink {
+	text-align: center;
+	margin-top: 20px;
+}
+
+.btnlink button {
+	font-size: 30px;
+	background-color: white;
+	color:black;
+	width :500px;
+	height : 60px;
+}
+
+
+.history .middle-school {
+	text-align: center;
+}
+
+.history .high-school {
+	text-align: center;
+
+}
+
+.history .univ {
+	text-align: center;
+}
+
+
+.pic-empty {
+	margin-top : 200px;
+	
+}
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+const alertEvent = document.querySelector('.left-bar');
+const alertEvent2 = document.querySelector('.right-bar');
+
+
+
+alertEvent.addEventListener('click', function() {
+  alert('Not ready yet!');
+})
+
+alertEvent2.addEventListener('click', function() {
+  alert('Not ready yet!');
+})
+
+
