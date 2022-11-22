@@ -1,0 +1,330 @@
+﻿
+ <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="style.css">
+
+<title>Travel Mates!</title>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<div class="login-left">
+
+<div class="title">
+
+<div class="main-title">
+
+<h1>Welcome to Our Travel Community</h1>
+
+<p>Please login to use the platform</p>
+
+</div>
+
+</div>
+
+<form class = 'login-form'>
+
+<div class="login-form-content">
+
+<div class="form-item">
+
+<label for = "email">Email</label>
+
+<input type = 'text' id = 'email'>
+
+</div>
+
+
+<br>
+
+
+<div class="form-item">
+
+<label for = "password">Password</label>
+
+<input type = 'password' id = 'password'>
+
+</div>
+
+<br>
+
+<div class="form-item">
+
+<div class="checkbox">
+
+<input type ="checkbox" id = 'checkbox'>
+
+Remember me
+
+</div>
+
+</div>
+
+<br>
+
+<div class="form-item">
+
+<div class="signin-btn">
+
+<button id = "signin">SIGN IN</button>
+
+</div>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="login-footer">
+
+<a href = "#">
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/2048px-Facebook_f_logo_%282019%29.svg.png" alt = "" width = "30">Facebook Login
+
+</a>
+
+<a href = "#">
+
+<img src = "https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_1280.jpg" alt = "" width = "40">Instagram Login
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="login-right">
+
+<img src = "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=821&q=80" alt = '' height="100%">
+
+</div>
+
+</div>
+
+</form>
+
+
+
+</div>
+
+</body>
+
+</html>
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+* {
+
+box-sizing: border-box;
+
+
+}
+
+
+body {
+
+margin: 0;
+
+padding: 0;
+
+padding:40px;
+
+background-color: lightgrey;
+
+}
+
+
+h1 {
+
+
+margin-bottom: 0;
+
+padding-top: 90px;
+
+}
+
+
+p {
+
+margin-top : 5px;
+
+margin-bottom : 50px;
+
+}
+
+
+
+#signin {
+
+width :450px;
+
+background-color:salmon;
+
+border: none;
+
+border-radius: 100px;
+
+height : 40px;
+
+font-size: 20px;
+
+margin-top:30px;
+
+}
+
+
+
+.container {
+
+min-height: calc(100vh-40px * 2);
+
+display: grid;
+
+grid-template-columns: 50% 50%;
+
+border-radius: 10px;
+
+overflow:hidden;
+
+}
+
+
+
+/*.font-item label:not(.font-item) {
+
+display : inline-block;
+
+margin-bottom: 10px;
+
+position: absolute;
+
+padding: 0 10px;
+
+transform: translate(30px, -10px);
+
+font-size: 14px;
+
+} */
+
+
+
+.login-left {
+
+width : auto;
+
+display : flex;
+
+flex-direction: column;
+
+justify-content: content;
+
+padding-left:150px;
+
+background-color: beige;
+
+height: 100vh;
+
+
+}
+
+
+.checkbox {
+
+align-items: center;
+
+gap: 7px;
+
+display: flex;
+
+}
+
+
+
+input[type='text'], input[type='password'] {
+
+border : 1px solid black;
+
+height : 40px;
+
+width : 300px;
+
+padding : 0 2rem;
+
+border-radius: 100px;
+
+}
+
+
+#email {
+
+padding-left : 10px;
+
+}
+
+
+.login-footer {
+
+display:flex;
+
+gap : 39px;
+
+margin-top: 40px;
+
+}
+
+
+a {
+
+gap : 15px;
+
+text-decoration: none;
+
+border : 1px solid black;
+
+color: black;
+
+
+justify-content: center;
+
+border-radius: 100px;
+
+display: flex;
+
+font-size: 10px;
+
+align-items: center;
+
+}
+
+
+a:hover {
+
+background-color: #eeee;
+
+}
+
+
+
+
+﻿
