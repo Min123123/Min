@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="title">
+
+        <div class="toBack">
+            <b><</b>
+        </div>
+
+        <div class="closer">
+            <b>X</b>
+        </div>
+
+        <h1>OTP Varification</h1>
+        <p id = "top">Code has been sent to +10******51</p>
+
+        <div class="numbers">
+            <input type = "text" id = '1' maxlength="1" size = '1'>
+            <input type = "text" id = '2' maxlength="1" size = '1'>
+            <input type = "text" id = '3' maxlength="1" size = '1'>
+            <input type = "text" id = '4' maxlength="1" size = '1'>
+            <input type = "text" iSd = '5' maxlength="1" size = '1'>
+            <input type = "text" id = '6' maxlength="1" size = '1'>
+        </div>
+    
+        <p id = "bottom">Didn't get the otp? <a href = "">Resend</a></p>
+    
+        <div class="verify">
+            <button class = 'btn'>Verify</button>
+        </div>
+    </div>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+
+* {
+ box-sizing: border-box;   
+ color : black;
+ 
+}
+
+h1 {
+    font-size: 50px;
+    margin-top:80px;
+    font-family: 'Architects Daughter', cursive;
+}
+
+.closer {
+    float:right;
+    color:black;
+    font-size:30px;
+    padding-right : 22px;
+    padding-top : 5px; 
+}
+
+.closer:hover b {
+    color: red;
+ }
+
+.toBack {
+    float:left;
+    color:black;
+    font-size:30px;
+    padding-left : 22px;
+    padding-top : 5px; 
+}
+
+.toBack:hover b {
+    color:salmon;
+}
+
+
+body {    
+    background-image: url(https://images.unsplash.com/photo-1660162135042-490690bb52b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2069&q=80);
+    margin : 0;
+    padding: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-size:cover;
+    height:100vh;
+}
+
+.title  {
+    text-align: center;
+    border-radius: 30px;
+    background-color: white;
+}
+
+
+.numbers {
+    word-spacing: 7px;   
+    margin:30px 50px;    
+}
+
+
+#bottom {
+    
+}
+
+a {
+    color:red;
+}
+
+#1 {
+    
+}
+
+
+.verify {
+    margin-bottom: 30px;
+    
+}
+
+.btn {
+    background-color: grey;
+    border-radius: 30px;
+    border-style:none;
+    font-size: 30px;    
+    font-family: 'Architects Daughter', cursive;
+    color:darkorange;
+}
