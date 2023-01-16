@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Profile Card</title>
+</head>
+
+<div class="profile">
+
+
+    <div class="profile-image">
+        <img src = "https://i.pinimg.com/originals/04/fe/b7/04feb74d80ff45cc7b87bc2187702f81.jpg">
+
+    </div>
+    
+    <div class="profile-des">
+        <h1 class = 'name'>Min</h1>    
+        <p>Pre-Dev.</p>  
+        <p>location : Busan</p>
+        <p>E-mail : xoqkq7@naver.com</p>
+    </div>
+            
+    <br><br>  
+
+    <div class="profile-social">
+        <a href = "#" class = 'facebook'>fb</a>
+        <a href = "#" class = 'Instagram'>ig</a>
+        <a href = "#" class = 'Kakao'>kakao</a>
+        <a href = "#" class = 'Whatsapp'>wa</a>
+    </div>
+    <br><br>
+    <div class="profile-btn">
+      <button><b><i>follow</b></i></button>
+      <button><b><i>search more</b></i></button>
+    </div>
+        
+        
+</div>
+
+
+
+</body>
+</html>
+
+
+
+* {
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    background : url("https://plus.unsplash.com/premium_photo-1672663584612-32caf98fe09a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");       
+}
+
+img {
+    width : 500px;
+    height : 500px;
+    display:block;
+  margin: auto;
+    border-radius: 30%;
+  
+}
+
+.profile-des .name {
+   color : salmon;
+}
+
+.profile-des {
+  margin:20px auto;
+  text-align : center;
+  display: block;
+  justify-content : center;
+  padding : 50px;
+  background-color:white;
+  width :300px;
+  border : 5px solid grey;
+  height : 300px;
+  border-radius : 30%;
+}
+
+
+.profile-social {
+  text-align : center;  
+}
+
+
+a {
+    text-decoration: none;
+    color : black;    
+    padding-right : 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}   
+
+
+.profile-btn {
+  text-align : center;
+}
+
+
+a:hover {
+    color : red;
+}
+
+button {
+  background-color:beige;
+  border : none;
+  width : 5opx;
+  height : 30px;
+  color : green;
+  text-align : center;
+  cursor : pointer;
+  border-radius: 20%;
+  
+}
+
+button:hover {
+  background : orange;
+}
+
+
+* {
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    background : url("https://plus.unsplash.com/premium_photo-1672663584612-32caf98fe09a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");       
+}
+
+img {
+    width : 500px;
+    height : 500px;
+    display:block;
+  margin: auto;
+    border-radius: 30%;
+  
+}
+
+.profile-des .name {
+   color : salmon;
+}
+
+.profile-des {
+  margin:20px auto;
+  text-align : center;
+  display: block;
+  justify-content : center;
+  padding : 50px;
+  background-color:white;
+  width :300px;
+  border : 5px solid grey;
+  height : 300px;
+  border-radius : 30%;
+}
+
+
+.profile-social {
+  text-align : center;  
+}
+
+
+a {
+    text-decoration: none;
+    color : black;    
+    padding-right : 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}   
+
+
+.profile-btn {
+  text-align : center;
+}
+
+
+a:hover {
+    color : red;
+}
+
+button {
+  background-color:beige;
+  border : none;
+  width : 5opx;
+  height : 30px;
+  color : green;
+  text-align : center;
+  cursor : pointer;
+  border-radius: 20%;
+  
+}
+
+button:hover {
+  background : orange;
+}
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    
+}
+
+
+body {
+    background : url("https://plus.unsplash.com/premium_photo-1672663584612-32caf98fe09a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");       
+}
+
+img {
+    width : 500px;
+    height : 500px;
+    display:block;
+  margin: auto;
+    border-radius: 30%;
+  
+}
+
+.profile-des .name {
+   color : salmon;
+}
+
+.profile-des {
+  margin:20px auto;
+  text-align : center;
+  display: block;
+  justify-content : center;
+  padding : 50px;
+  background-color:white;
+  width :300px;
+  border : 5px solid grey;
+  height : 300px;
+  border-radius : 30%;
+}
+
+
+.profile-social {
+  text-align : center;  
+}
+
+
+a {
+    text-decoration: none;
+    color : black;    
+    padding-right : 20px;
+    font-size: 20px;
+    font-weight: bolder;
+}   
+
+
+.profile-btn {
+  text-align : center;
+}
+
+
+a:hover {
+    color : red;
+}
+
+button {
+  background-color:beige;
+  border : none;
+  width : 5opx;
+  height : 30px;
+  color : green;
+  text-align : center;
+  cursor : pointer;
+  border-radius: 20%;
+  
+}
+
+button:hover {
+  background : orange;
+}
+
+
