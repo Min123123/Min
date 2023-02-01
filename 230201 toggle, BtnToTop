@@ -1,0 +1,239 @@
+
+// toggle btn
+
+
+// const tgl = document.getElementById('tgl');
+
+// tgl.addEventListener('click', function() {
+//   document.body.classList.toggle('grayscale');
+// });
+
+const tglbtn = document.getElementById('tgl');
+
+const tglfunc = function() {
+	document.body.classList.toggle('turn');
+}
+
+// dark 모드일때는 버튼 색상을 흰색으로
+// const  btnwhite = function() {
+// 	document.querySelector('#tgl').style.backgroundColor = 'white';
+// }
+	
+
+
+
+tglbtn.addEventListener('click', tglfunc);
+tglbtn.addEventListener('click', btnwhite);
+
+
+
+
+const backToTop = document.getElementById('scrolltotop');
+
+const scrollfunc = function() {
+	let pageYOffset = window.pageYOffset;
+
+	if (pageYOffset !== 0) { // 화면이 아래로 내려가있을 경우, 버튼에 클래스 추가
+		backToTop.classList.add('showw');
+	} else { // 화면이 최상단인경우, 버튼 필요 x
+		backToTop.classList.remove('showw');
+	}
+}
+
+
+const moveBackToTop = function() {
+	if (window.pageYOffset > 0) {
+		window.scrollTo({top:0, behavior: "smooth"})
+	}
+}
+
+
+window.addEventListener('scroll', scrollfunc);
+backToTop.addEventListener('click', moveBackToTop);
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style1.css">
+	<title>Scroll to Top Btn</title>
+	 <!-- font awesome-->
+    <script src="https://kit.fontawesome.com/7502e7a314.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="big	box"></div>
+		<div class="big	box2"></div>
+		<div class="big box3"></div>
+		<div class="big	box4"></div>
+		<div class="big	box5"></div>
+		<div class="big	box6"></div>
+		<div class="big	box7"></div>
+		<div class="big	box8"></div>
+		<div class="big	box9"></div>
+		<div class="big	box10"></div>
+	</div>
+
+	<!-- <button id ='tgl' class = 'turn'>toggle btn</button> -->
+	
+	<!-- <button onclick="tglfunc()" id = 'tgl'>Toggle dark mode</button> -->
+
+	<button id = 'tgl'>toggle</button>
+
+	<a id="scrolltotop" class = 'showw'></a>
+
+
+	<script src="practice.js"></script>
+</body>
+</html>
+
+
+
+* {
+  box-sizing: border-box;
+  background-color: beige;
+}
+
+body {
+  filter : grayscale(0%);
+}
+
+body.grayscale {
+  filter : grayscale(100%);
+}
+
+
+
+
+.container {
+  width: 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+.big {
+  margin-bottom: 2rem;
+  border-radius: 5px;
+}
+
+.box {
+	width : 50px;
+	height: 50px;
+	background-color: green;
+}
+
+.box2 {
+	width : 50px;
+	height: 50px;
+	background-color: black;
+}
+.box3 {
+	width : 50px;
+	height: 50px;
+	background-color: red;
+}
+.box4 {
+	width : 50px;
+	height: 50px;
+	background-color: blue;
+}
+.box5 {
+	width : 50px;
+	height: 50px;
+	background-color: grey;
+}
+.box6 {
+	width : 50px;
+	height: 50px;
+	background-color: salmon;
+}
+.box7 {
+	width : 50px;
+	height: 50px;
+	background-color: lightgrey;
+}
+.box8 {
+	width : 50px;
+	height: 50px;
+	background-color: lightgreen;
+}
+
+.box9 {
+	width : 50px;
+	height: 50px;
+	background-color: yellowgreen;
+}
+
+.box10 {
+	width : 50px;
+	height: 50px;
+	background-color: blueviolet;
+}
+
+#scrolltotop {
+    background-color: rgb(47,48,49);
+    width : 40px;
+    height : 40px;
+    text-align: center;
+    border-radius: 20px;
+    position: fixed;
+    bottom : 30px;
+    right : 30px;
+    transition-property: background-color, opacity, visibility;
+    transition-duration: 3s, 5s, 5s; 
+    opacity : 0;
+    visibility: hidden;
+    z-index: 999; /* 최상단에 위치 */
+    cursor: pointer;   
+}
+
+
+/* #scrolltotop .show:hover {
+    background-color: red;
+    
+} */
+
+/* 아이콘 적용 방법
+    1. ::after (요소 뒤에 content추가) 가상 요소에서,
+    2. content: font awesome 유니코드를 추가하고,
+    3. font-family: FontAwesome이라고 넣는다.*/
+#scrolltotop::after {
+    content : "\f077";
+    font-family: FontAwesome;   
+    font-size: 1.5rem;
+    line-height: 40px;
+    color:#fff;
+}
+
+
+#tgl {
+  width : 60px;
+  height : 60px;
+  background-color: black;
+  border-radius: 20px;
+  color:white;
+  cursor: pointer;  
+  font-weight: bold;
+}
+
+.turn {
+  background-color: black;
+}
+
+.btnwhite {
+  background-color: #fff;
+}
+
+
+#scrolltotop.showw {
+    opacity: 1;
+    visibility: visible;
+    background-color: rgb(47,48,49);
+} 
