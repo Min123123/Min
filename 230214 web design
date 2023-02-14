@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font awesome-->
+    <script src="https://kit.fontawesome.com/7502e7a314.js" crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="style1.css">
+    <!-- font -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <title>facebook always on</title>
+</head>
+
+<body>
+    <div class="main-card">
+        <div class="forgrid">
+            <div class="top-bar">
+                <a href="#"> 
+                    <i class="fa-solid fa-home"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-dog"></i>
+                </a> 
+                <a href="#">
+                    <i class="fa-solid fa-cat"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-burger"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+                <!-- <ul>
+                    <li><a href="#">fb</a></li>
+                    <li><a href="#">fb</a></li>
+                    <li><a href="#">fb</a></li>
+                    <li><a href="#">fb</a></li> 
+                </ul> -->
+            </div>
+            <div class="card-image">
+                <img src="https://images.unsplash.com/photo-1530625243345-797b4c1836ee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=436&q=80" width="700px" height="750px">
+            </div>
+            
+            <span class = "nationality">Korea</span>
+
+            <div class="date">
+                <h2>Fabruary</h2>
+                <h1>2</h1>
+            </div>
+        </div>
+        
+        
+       
+        <div class="search-bar">
+            <input type="text" size="70" placeholder="LGTM!">
+        </div>
+        
+
+    </div>
+    
+
+</body>
+</html>
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body {
+    margin : 0px;
+    padding : 0;
+    background: rgb(239, 240, 242);
+}
+
+.main-card {
+    margin : 0 auto;
+    margin-top : 50px;
+    width : 1500px;
+    height : 800px;
+    background-color: white;
+    /* display : flex;
+    justify-content: center;
+    align-items: center; */
+    border-radius: 30px;
+}
+
+.top-bar {
+    position:relative;
+    left : 110px; 
+    top : 70px;   
+    height : 30px;
+}
+
+.forgrid {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color : black;
+    font-size : 30px;
+    padding-left:60px;
+}
+
+img {
+    position: relative;
+    top : 30px;
+    border-radius: 30px;
+}
+
+.nationality {
+    position: relative;
+    left : 150px;
+    bottom: 500px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.date {
+    position: relative;
+    bottom : 450px;
+    right : 600px;
+    font-size: 40px;
+}
+
+.search-bar {
+    position:relative;
+    bottom : 400px;
+    left : 150px;
+}
+
+input[type=text] {
+    border-radius: 20px;
+    height : 50px;
+    border-color: rgb(106, 105, 111);
+    border-width: 5px;
+}
+
+input[type=text]:focus {
+    border : 3px solid #555;
+}
+/* .top-bar li {
+    list-style: none;
+}
+
+.top-bar li a {
+    text-decoration: none;
+    color : black;
+} */
