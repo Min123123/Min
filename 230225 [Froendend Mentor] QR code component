@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/7502e7a314.js" crossorigin="anonymous"></script>
+    
+    <title>QR code component</title>
+</head>
+<body>
+    <div class="main-card">
+        <div class="qrimg">
+            <img src="http://2.bp.blogspot.com/-S-u1yd97UWs/U0NGbuAUE1I/AAAAAAAAJUk/7s9pCG-Q_og/s1600/QRCode-135.png" class="qrqr">
+            
+        </div>
+        <div class="card-title">
+            <h2>Improve your front-end skills by building projects</h2>
+        </div>
+        <div class="card-desc">
+            Scan the QR to visit Frontend Mentor and take your coding skills to the next level
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin:0;
+    background-color: hsl(220, 15%, 55%);
+    align-items: center;
+    display:flex;
+    height : 100vh;
+    position: relative;
+}
+
+.main-card {
+    width : 350px;
+    height : 500px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    text-align: center;
+    margin: 0 auto;
+    padding : 10px;
+}
+
+.qrqr {
+    width : 300px;
+    height : 300px;
+}
+
+.card-title {
+    font-weight: bolder;
+    padding-top: 0;
+}
+
+.card-desc {
+    padding-top : 0.5rem;
+}
