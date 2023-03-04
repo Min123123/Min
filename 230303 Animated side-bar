@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/7502e7a314.js" crossorigin="anonymous"></script>
+    <title>Side-bar</title>
+</head>
+<body>
+    <nav class = 'sidebar'>
+        <ul>
+            <li>
+                <a href = "#" class = 'logo'>
+                    <i class="fa-solid fa-cat"></i>
+                    <span class = 'nav-item'></span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class="fas fa-solid fa-home"></i>
+                    <span class = 'nav-item'>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class="fas fa-solid fa-face-smile"></i>
+                    <span class = 'nav-item'>About Me</span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class="fas fa-solid fa-wallet"></i>
+                    <span class = 'nav-item'>Financial</span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class="fas fa-sharp fa-solid fa-chart-simple"></i>
+                    <span class = 'nav-item'>Status</span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class="fas fa-solid fa-list"></i>
+                    <span class = 'nav-item'>Plan</span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class="fas fa-solid fa-sliders"></i>
+                    <span class = 'nav-item'>Setting</span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class="fas fa-solid fa-circle-question"></i>
+                    <span class = 'nav-item'>Q&A</span>
+                </a>
+            </li>
+                <a href = "#" class = 'exit'>
+                    <i class="fas fa-solid fa-arrow-right-from-bracket"></i>
+                    <span class = 'nav-item'>Exit</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body { 
+    background-color: antiquewhite;
+}
+
+.logo {
+    left : 5px;
+}
+
+.logo i {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+nav {
+    position:absolute;
+    width : 90px;
+    background-color: white;
+    height :100%;
+    left: 0;
+    top : 0;
+    overflow: hidden;
+    transition : width 0.25s linear;
+    box-shadow: 0 20px 20px grey;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    position: relative;
+    font-size: 14px;
+    display: table;
+    width : 300px;
+    text-decoration: none;
+    color : black;
+    padding :15px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-item {
+    position: relative;
+    margin-left : 10px;
+    top : 10px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+
+
+.fas {
+    position: relative;
+    height : 40px;
+    top : 14px;
+    text-align: center;
+    width : 70px;
+}
+
+i {
+    font-size: 20px;   
+}
+
+li:hover:not(:first-child){
+    background-color: lightgrey;
+}
+
+nav:hover {
+    width : 220px;
+}
+
+.exit {
+    position:absolute;
+    bottom : 0px;
+}
+
+.exit:hover {
+    background-color: lightgrey;
+}
