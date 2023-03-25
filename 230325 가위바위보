@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/7502e7a314.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <title>가위바위보재기</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="compick">
+            <h3>컴퓨터 선택 : </h3> <span class = 'com'></span>
+        </div>
+        <div class="playerpick">
+            <h3>플레이어 선택 : </h3> <span class = 'player'></span>
+        </div>
+        
+        <div class="btn">
+            <div>
+                <button class = 'btns sissor'>가위</button>
+            </div>
+            <div>
+                <button class = 'btns rock'>바위</button>
+            </div>
+            <div>
+                <button class = 'btns paper'>보</button>
+            </div>
+        </div>
+
+        <div class = 'rst'>
+            <span class = 'result'></span>
+        </div>
+        
+    </div>
+     
+
+   <script src="practice.js"></script>
+</body> 
+</html>
+
+
+
+const com = document.querySelector('.com');
+const player = document.querySelector('.player');
+const btns = document.querySelectorAll('.btn');
+const result = document.querySelector('.result');
+
+
+// 결과를 화면에 출력
+const show = (user, computer, ret) => {
+    com.innerText = computer;
+    player.innerText = user;
+    result.innerText = ret;
+}
+
+
+// 플레이어가 찍은 결과를 화면에 출력
+const play = (e) => {
+    const user = e.target.innerText; // 플레이어 픽
+    const randomIndex = Math.floor(Math.random() * 3); // 컴퓨터 픽
+    const computer = forCom[randomIndex]; // 인덱스를 컴퓨터의 배열에 삽입
+    game(user, computer);
+}
+
+
+// 플레이어가 가위바위보 중 하나를 선택하면 표시되도록
+btns.forEach((btns) => {  
+    btns.addEventListener('click', play);
+});
+
+
+// 배열에서 랜덤 인덱스 추출
+const forCom = ['가위', '바위', '보'];
+
+Math.random() * 3; // 랜덤함수의 범위를 지정, < 3과 동일한 의미
+// 3 이하의 랜덤한 정수 추출 -> forCom배열 활용
+Math.floor(Math.random() * 3); // 소수점을 떼버리는 floor메서드
+
+
+
+// 승패 판별
+const game = (user, computer) => {
+    // 결과 출력 변수
+    let msg;
+
+    if (user === computer) {
+        msg = '무승부';
+    } else {
+        switch(user + computer) {
+            // 가위보, 바위가위, 보바위 => 플레이어 승
+            // 가위바위, 바위보, 보가위 => 컴퓨터 승
+            case  '가위보':
+            case '바위가위':
+            case '보바위':
+                msg = '플레이어 승';
+                break;
+            case  '가위바위':
+            case '바위보':
+            case '보가위':
+                msg = '컴퓨터 승';
+                break;    
+            }
+        }
+        // 결과를 화면에 출력함
+        show(user, computer, msg);
+    };
+    
+
+
+
+
+    // if (user === computer) {
+    //     console.log('무승부');
+    // }else if (user === '가위' && computer === '보') {
+    //     console.log('플레이어 승!');
+    // }else if (user === '가위' && computer === '바위') {
+    //    console.log('컴퓨터 승!');
+    // }else if (user === '바위' && computer === '가위') {
+    //     console.log('플레이어 승!');
+    // }else if (user === '바위' && computer === '보') {
+    //     console.log('컴퓨터 승!');
+    // }else if (user === '보' && computer === '가위') {
+    //     console.log('컴퓨터 승!');
+    // }else if (user === '보' && computer === '바위') {
+    //     console.log('플레이어 승!');
+    // }
+    
+    
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* letter-spacing: 3px; */
+}
+
+body {
+    width : 100%;
+    height : 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+.btn {
+    display : flex;
+    justify-content: space-around;
+    margin-top : 20px;
+}
+
+.btns {
+    border : none;
+    font-size : 30px;
+    font-weight: bolder;
+    margin-right : 50px;
+    /* padding : 20px; */
+    border-radius: 10px;
+    width : 100px;
+    height : 100px;
+    cursor: pointer;
+}
+
+.compick {
+    display : inline;
+}
+
+.rock {
+    background-color: green;
+}
+
+.sissor {
+    background-color: yellow;
+}
+
+.paper {
+    background-color: lightcoral;
+}
+
+.rst {
+    margin-top : 30px;
+}
+
+.result {
+    text-align: center;
+    font-size: 70px;
+    font-weight: bolder;
+}
+
+
+
+
+
